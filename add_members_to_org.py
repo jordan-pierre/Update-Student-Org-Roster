@@ -95,7 +95,10 @@ def main():
         except:
             # Record failed members
             failed_members.append(individual)
-            pass
+            
+            # Click cancel button
+            cancel_button = driver.find_element_by_id('ctl00_ContentBody_uc1_roster_lnk_cancel_roster_update')
+            cancel_button.click()
 
     # Print members that were added to roster and those that didn't
     print("Added: {}".format(added_members))
